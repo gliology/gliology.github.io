@@ -1,0 +1,13 @@
+<div class="items style1 big onscroll-fade-in">
+    {{ range .Site.Data.networks }}
+    <div class="inner">
+        <h3>{{ .title }}</h3>
+
+        <span class="image main"><img src="images/{{ .logo }}" alt="" /></span>
+
+        {{ .text | markdownify }}
+
+    </div>
+    {{ end }}
+</div>
+

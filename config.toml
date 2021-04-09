@@ -1,0 +1,31 @@
+baseURL = "https://gli.al"
+languageCode = "en-us"
+title = "gli.al"
+
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = false
+    respectDoNotTrack = false
+    useSessionStorage = false
+  [privacy.instagram]
+    disable = false
+    simple = false
+  [privacy.twitter]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.vimeo]
+    disable = false
+    enableDNT = false
+    simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false
+
+[params]
+  subtitle = "Decentralization Support and Security"
+  description = "We are an independet group of decentralization enthusiasts providing peer-to-peer infrastructure."
+  contact = "Please feel free to contact us with any questions, feedback or requests."

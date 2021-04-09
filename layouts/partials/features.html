@@ -1,0 +1,8 @@
+<ul class="feature-icons">
+    {{ range .Site.Data.features }}
+    <li class="icon nf-{{ .icon }}">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text | markdownify }}</p>
+    </li>
+    {{ end }}
+</ul>

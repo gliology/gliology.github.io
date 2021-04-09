@@ -1,0 +1,73 @@
+{{ define "title" }}{{ .Site.Title }} &ndash; {{ .Site.Params.subtitle }}{{ end }}
+
+{{ define "content" }}
+<!-- Intro header -->
+<section class="intro">
+    <header>
+        <h1>{{ .Site.Title }}</h1>
+        <p>{{ .Site.Params.subtitle }}</p>
+        <ul class="actions">
+            <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <span class="image fill" data-position="center"><img src="images/header.png" alt="" /></span>
+    </div>
+</section>
+
+<!-- Index section -->
+<section id="first">
+    <header>
+        <h2>{{ .Title }}</h2>
+    </header>
+    <div class="content">
+        {{ .Content }}
+
+        {{ partial "features.html" . }}
+    </div>
+</section>
+
+<!-- Page sections -->
+{{ range .Site.RegularPages }}
+<section>
+    <header>
+        <h2>{{ .Title }}</h2>
+    </header>
+    <div class="content">
+        {{ .Content }}
+    </div>
+</section>
+{{ end }}
+
+<!-- Contact form -->
+<section>
+    <header>
+        <h2>Get in touch</h2>
+    </header>
+    <div class="content">
+        <p>{{ .Site.Params.contact | markdownify }}</p>
+
+        {{ partial "contactform.html" . }}
+    </div>
+
+    <footer>
+        <ul class="items">
+            <li>
+                <h3>Email</h3>
+                <a href="mailto:contact@gli.al">contact@gli.al</a>
+            </li>
+            <li>
+                <h3>Matrix</h3>
+                <a href="https://matrix.to/#/@glial:matrix.org">@glial:matrix.org</a>
+            </li>
+            <li>
+                <h3>Elsewhere</h3>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/gliocyte" class="icon nf-fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://github.com/gliology" class="icon nf-fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+</section>
+{{ end }}

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{{ block "title" . }} {{ .Site.Title }} &ndash; {{ .Page.Title }} {{ end }}</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="{{ .Site.Params.description }}" />
+        <meta name="keywords" content="" />
+
+        {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
+        {{ $style := resources.Get "sass/main.scss" | toCSS $options | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+        {{ partial "favicon.html" . }}
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            {{ block "content" . }}
+
+            {{ .Content }}
+
+            {{ end }}
+
+            <!-- Copyright -->
+            <div class="copyright">&copy; by gli.al &ndash; design by <a href="https://html5up.net">HTML5 UP</a></div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jquery.scrolly.min.js"></script>
+        <script src="/js/browser.min.js"></script>
+        <script src="/js/breakpoints.min.js"></script>
+        <script src="/js/util.js"></script>
+        <script src="/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,3 @@
+title: Safe & Secure
+icon: mdi-server_security
+text: Following best practice and defense in depth, i.e. hardened kernels, sandboxing, hardware-stored access keys.
