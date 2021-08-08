@@ -1,4 +1,6 @@
 title: Kusama
 logo: kusama.png
 text: |
-  We are preparing to validate on Kusama.
+  Our validator, _Astrocyte_, is up and running:
+    - [subscan](https://kusama.subscan.io/validator/DJQLfZxrnhnssEPFxEpYbowDdNsU3N4gMXStw84eko1VaCw)
+    - [polkastats](https://kusama.polkastats.io/validator/DJQLfZxrnhnssEPFxEpYbowDdNsU3N4gMXStw84eko1VaCw)
