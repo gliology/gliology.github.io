@@ -1,0 +1,20 @@
+/* Fonts */
+
+	// Subsets written by design/subset-fonts.py.
+		@mixin font-face($family, $file, $weight: normal, $style: normal) {
+			@font-face {
+				font-family: $family;
+				font-style: $style;
+				font-weight: $weight;
+				font-display: swap;
+				src: url('/webfonts/#{$file}.woff2') format('woff2');
+			}
+		}
+
+	@include font-face('Source Sans Pro', 'source-sans-300', 300);
+	@include font-face('Source Sans Pro', 'source-sans-300-italic', 300, italic);
+	@include font-face('Source Sans Pro', 'source-sans-600', 600);
+	@include font-face('Source Sans Pro', 'source-sans-700', 700);
+	@include font-face('Raleway', 'raleway-600', 600);
+	@include font-face('Raleway', 'raleway-800', 800);
+	@include font-face('NerdFontsSymbols Nerd Font', 'icons');

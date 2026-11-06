@@ -1,4 +1,4 @@
 ---
-title: About Us
+title: What we do
 ---
-We are an independent group of decentralization enthusiasts and run an ever-expanding set of peer-to-peer infrastructure. We are experienced hard- and software engineers and system administrators and are consulted by various experts and researchers in the decentralization sphere.
+gli.al plans, builds and runs infrastructure for teams that cannot afford to get it wrong. We bring the discipline of validator operations, where an outage or a mishandled key costs money in public, to ordinary servers, networks and services, centralized or decentralized.

@@ -4,8 +4,6 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
-@import 'nerd-fonts-generated.css';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800');
 
 /*
 	Paradigm Shift by HTML5 UP
@@ -28,6 +26,8 @@
 // Base.
 
 	@import 'base/reset';
+	@import 'base/fonts';
+	@import 'base/icons';
 	@import 'base/page';
 	@import 'base/typography';
 
@@ -44,9 +44,7 @@
 	@import 'components/icons';
 	@import 'components/table';
 	@import 'components/arrow';
-	@import 'components/gallery';
 	@import 'components/feature-icons';
-	@import 'components/items';
 
 // Layout.
 

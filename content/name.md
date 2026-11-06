@@ -1,7 +1,8 @@
 ---
-title: Our name 
+title: Our name
+weight: 30
 build:
   render: never
   list: always
 ---
-We named ourselves after neuroglial cells, which are responsible for supporting and protecting neural cells across the nervous system. Without their support, the billion-node decentralized network of neurons that drives all information processing in the central and peripheral nervous system could not exist.
+We named ourselves after neuroglial cells, which are responsible for supporting and protecting neural cells across the nervous system. Without their support, the billion-node decentralized network of neurons that drives all information processing in the central and peripheral nervous system could not exist. We aim to be that for the systems you depend on.

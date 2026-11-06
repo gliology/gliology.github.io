@@ -1,32 +1,9 @@
 baseURL = "https://gli.al"
 locale = "en-us"
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["taxonomy", "term", "rss"]
 title = "gli.al"
 
-[privacy]
-  [privacy.disqus]
-    disable = false
-  [privacy.googleAnalytics]
-    anonymizeIP = false
-    disable = false
-    respectDoNotTrack = false
-    useSessionStorage = false
-  [privacy.instagram]
-    disable = false
-    simple = false
-  [privacy.twitter]
-    disable = false
-    enableDNT = false
-    simple = false
-  [privacy.vimeo]
-    disable = false
-    enableDNT = false
-    simple = false
-  [privacy.youtube]
-    disable = false
-    privacyEnhanced = false
-
 [params]
-  subtitle = "Decentralization Support and Security"
-  description = "We are an independet group of decentralization enthusiasts providing peer-to-peer infrastructure."
-  contact = "Please feel free to contact us with any questions, feedback or requests."
+  subtitle = "Infrastructure consulting and operations"
+  description = "Infrastructure consulting and operations: hosting, DNS and network design, monitoring, key management and security. A F.R.E.D. brand."
+  contact = "Most work starts as a review of what you have, continues as a build we hand over documented, or stays with us as managed operations. Tell us where you are."

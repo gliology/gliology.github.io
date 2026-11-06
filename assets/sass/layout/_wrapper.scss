@@ -565,8 +565,8 @@
 
 	}
 
-	// Mobile.
-		body.is-mobile {
+	// Touch devices.
+		@media (pointer: coarse) {
 			#wrapper {
 
 				// Background.
@@ -662,54 +662,4 @@
 
 				}
 
-		}
-
-	// IE.
-		body.is-ie {
-			#wrapper {
-				$pad: 5rem;
-
-				// Sections (all).
-					section {
-						display: flex;
-						flex-wrap: wrap;
-
-						> header {
-							width: 50%;
-						}
-
-						> .content {
-							width: 50%;
-						}
-
-						> footer {
-							width: 50%;
-							text-align: left;
-							margin-left: 50%;
-							padding: $pad;
-						}
-					}
-
-				// Sections (top level).
-					> section {
-						> .content {
-							> section {
-								width: 100vw;
-							}
-						}
-					}
-
-				@include breakpoint('<=large') {
-					$pad: 4rem;
-
-					// Sections (all).
-						section {
-							> footer {
-								padding: $pad;
-							}
-						}
-
-				}
-
-			}
 		}

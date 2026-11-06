@@ -1,15 +1,11 @@
 // Misc.
 	$misc: (
-		z-index-base:				10000,
-		gallery-lightbox-opacity:	0.875,
-    items-limit:        16
+		z-index-base:				10000
 	);
 
 // Duration.
 	$duration: (
-		transition:					0.25s,
-		gallery-lightbox-fadein:	0.5s,
-    items-delay:        0.15s
+		transition:					0.25s
 	);
 
 // Size.
@@ -18,13 +14,11 @@
     border-width:       1px,
 		element-height:			3rem,
 		element-margin:			1.5rem,
-    gutter:             3.5rem,
 		header-width:			25rem,
 		subheader-width:		22rem,
 		content-width:			60rem,
 		line-width:				2px,
-		form-gutter:			2rem,
-		gallery-gutter:			1.25rem,
+		form-gutter:			2rem
 	);
 
 // Font.

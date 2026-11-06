@@ -1,16 +1,16 @@
 <form id="contact-form" action="https://mail.denkmuskel.org/form" method="POST">
     <div class="fields">
         <div class="field half">
-            <input type="text" name="name" id="name" placeholder="Name" required />
+            <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" required />
         </div>
         <div class="field half">
-            <input type="email" name="email" id="email" placeholder="Email" required />
+            <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" required />
         </div>
         <div class="field">
-            <input type="text" name="subject" id="subject" placeholder="Subject" required />
+            <input type="text" name="subject" id="subject" placeholder="Subject" aria-label="Subject" required />
         </div>
         <div class="field">
-            <textarea name="message" id="message" placeholder="Message" rows="7" required></textarea>
+            <textarea name="message" id="message" placeholder="Message" aria-label="Message" rows="7" required></textarea>
         </div>
         <input type="hidden" name="site" value="gli.al" />
         <input type="text" name="website" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true" />

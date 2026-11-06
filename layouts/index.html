@@ -7,11 +7,15 @@
         <h1>{{ .Site.Title }}</h1>
         <p>{{ .Site.Params.subtitle }}</p>
         <ul class="actions">
-            <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+            <li><a href="#first" class="arrow" aria-label="Next"><span class="label">Next</span></a></li>
         </ul>
     </header>
     <div class="content">
-        <span class="image fill" data-position="center"><img src="images/header.jpg" alt="" /></span>
+        {{ $hero := resources.Get "images/header.jpg" }}
+        {{ $small := $hero.Resize "800x webp q75" }}
+        {{ $medium := $hero.Resize "1600x webp q75" }}
+        {{ $large := $hero.Resize "2600x webp q75" }}
+        <span class="image fill" data-position="center"><img src="{{ $medium.RelPermalink }}" srcset="{{ $small.RelPermalink }} 800w, {{ $medium.RelPermalink }} 1600w, {{ $large.RelPermalink }} 2600w" sizes="(max-width: 1152px) max(100vw, 150vh), max(50vw, 150vh)" width="{{ $medium.Width }}" height="{{ $medium.Height }}" alt="" fetchpriority="high" /></span>
     </div>
 </section>
 
@@ -23,7 +27,11 @@
     <div class="content">
         {{ .Content }}
 
-        {{ partial "features.html" . }}
+        {{ partial "features.html" hugo.Data.services }}
+
+        <ul class="actions">
+            <li><a href="#contact" class="button primary">Get in touch</a></li>
+        </ul>
     </div>
 </section>
 
@@ -40,7 +48,7 @@
 {{ end }}
 
 <!-- Contact form -->
-<section>
+<section id="contact">
     <header>
         <h2>Get in touch</h2>
     </header>
@@ -57,15 +65,12 @@
                 <a href="mailto:contact@gli.al">contact@gli.al</a>
             </li>
             <li>
-                <h3>Matrix</h3>
-                <a href="https://matrix.to/#/@glial:matrix.org">@glial:matrix.org</a>
+                <h3>GitHub</h3>
+                <a href="https://github.com/gliology">github.com/gliology</a>
             </li>
             <li>
-                <h3>Elsewhere</h3>
-                <ul class="icons">
-                    <li><a href="https://twitter.com/gliocyte" class="icon nf-fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="https://github.com/gliology" class="icon nf-fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
+                <h3>Studio</h3>
+                <p><a href="https://fred.build">F.R.E.D.</a>, Zug, Switzerland</p>
             </li>
         </ul>
     </footer>

@@ -1,0 +1,3 @@
+title: Hosting & operations
+icon: mdi-server
+text: Bare metal and cloud, declared in [NixOS](https://nixos.org), patched, backed up and restorable.

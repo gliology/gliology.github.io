@@ -1,5 +1,5 @@
 <ul class="feature-icons">
-    {{ range hugo.Data.features }}
+    {{ range . }}
     <li class="icon nf-{{ .icon }}">
         <h3>{{ .title }}</h3>
         <p>{{ .text | markdownify }}</p>

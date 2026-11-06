@@ -1,19 +1,29 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
     <head>
         <title>{{ block "title" . }} {{ .Site.Title }} &ndash; {{ .Page.Title }} {{ end }}</title>
 
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="{{ .Site.Params.description }}" />
-        <meta name="keywords" content="" />
+        <link rel="canonical" href="{{ .Permalink }}" />
+
+        {{ $card := (resources.Get "images/header.jpg").Fill "1200x630 Center jpg q80" }}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{{ .Permalink }}" />
+        <meta property="og:title" content="{{ .Site.Title }} &ndash; {{ .Site.Params.subtitle }}" />
+        <meta property="og:description" content="{{ .Site.Params.description }}" />
+        <meta property="og:image" content="{{ $card.Permalink }}" />
+        <meta name="twitter:card" content="summary_large_image" />
 
         {{ $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
         {{ $style := resources.Get "sass/main.scss" | toCSS $options | fingerprint }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
         {{ partial "favicon.html" . }}
     </head>
-    <body class="is-preload">
+    <body>
+        <!-- Set by script, so the page stays visible without it -->
+        <script>document.body.className = 'is-preload';</script>
 
         <!-- Wrapper -->
         <div id="wrapper">
@@ -25,16 +35,11 @@
             {{ end }}
 
             <!-- Copyright -->
-            <div class="copyright">&copy; by gli.al &ndash; design by <a href="https://html5up.net">HTML5 UP</a></div>
+            <div class="copyright">&copy; {{ now.Year }} gli.al &ndash; A <a href="https://fred.build">F.R.E.D.</a> brand &ndash; design by <a href="https://html5up.net">HTML5 UP</a></div>
 
         </div>
 
         <!-- Scripts -->
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/jquery.scrolly.min.js"></script>
-        <script src="/js/browser.min.js"></script>
-        <script src="/js/breakpoints.min.js"></script>
-        <script src="/js/util.js"></script>
         <script src="/js/main.js"></script>
         <script src="/js/contact.js"></script>
 
