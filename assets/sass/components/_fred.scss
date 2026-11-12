@@ -1,0 +1,96 @@
+/* F.R.E.D. banner */
+
+	a.fred {
+		border: solid _size(border-width) * 2 _palette(border);
+		border-radius: _size(border-radius);
+		color: _palette(fg-bold);
+		column-gap: 2rem;
+		display: grid;
+		grid-template-areas: "label cta" "mark text";
+		grid-template-columns: auto 1fr;
+		align-items: center;
+		margin: (_size(element-margin) * 1.5) 0 _size(element-margin) 0;
+		padding: 1.25rem 1.5rem;
+		row-gap: 1rem;
+		@include vendor('transition', 'border-color #{_duration(transition)} ease-in-out');
+
+		> .label,
+		> .cta {
+			font-family: _font(family-heading);
+			font-size: 0.75rem;
+			font-weight: _font(weight-heading-light);
+			letter-spacing: _font(kerning-heading);
+			line-height: 1;
+			text-transform: uppercase;
+		}
+
+		> .label {
+			color: _palette(fg-light);
+			grid-area: label;
+		}
+
+		> .cta {
+			grid-area: cta;
+			justify-self: end;
+			letter-spacing: 0.05em;
+			text-transform: none;
+			@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
+
+			.arrow {
+				display: inline-block;
+				margin-left: 0.5em;
+				@include vendor('transition', 'transform #{_duration(transition)} ease-in-out');
+			}
+		}
+
+		> .mark {
+			grid-area: mark;
+
+			svg {
+				display: block;
+				height: 2.25rem;
+				width: auto;
+
+				.d {
+					fill: _palette(accent-border);
+				}
+			}
+		}
+
+		> .text {
+			grid-area: text;
+			line-height: 1.75;
+
+			strong {
+				display: block;
+			}
+		}
+
+		&:hover,
+		&:focus-visible {
+			border-color: _palette(accent-border);
+			color: _palette(fg-bold);
+
+			> .cta {
+				color: _palette(accent-border);
+
+				.arrow {
+					transform: translateX(0.3em);
+				}
+			}
+		}
+
+		@include breakpoint('<=small') {
+			grid-template-areas: "label" "mark" "text" "cta";
+			grid-template-columns: 1fr;
+			row-gap: 0.75rem;
+
+			> .cta {
+				justify-self: start;
+			}
+
+			> .mark svg {
+				height: 2rem;
+			}
+		}
+	}
