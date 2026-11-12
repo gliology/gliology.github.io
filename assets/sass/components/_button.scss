@@ -37,14 +37,14 @@
 		white-space: nowrap;
 
 		&:hover {
-			box-shadow: inset 0 0 0 2px _palette(accent-alt);
-			color: _palette(accent-alt) !important;
+			box-shadow: inset 0 0 0 2px _palette(accent-border);
+			color: _palette(accent-border) !important;
 		}
 
 		&:active {
 			background-color: _palette(accent-bg);
-			box-shadow: inset 0 0 0 2px _palette(accent-alt);
-			color: _palette(accent-alt) !important;
+			box-shadow: inset 0 0 0 2px _palette(accent-border);
+			color: _palette(accent-border) !important;
 		}
 
 		&.small {
@@ -87,11 +87,11 @@
 			color: _palette(accent-fg) !important;
 
 			&:hover {
-				background-color: _palette(accent-alt);
+				background-color: _palette(accent-border);
 			}
 
 			&:active {
-				background-color: _palette(accent-border);
+				background-color: _palette(accent-alt);
 			}
 		}
 

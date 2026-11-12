@@ -366,6 +366,10 @@
 
 				a {
 					color: inherit;
+
+					&:hover {
+						color: _palette(accent-border);
+					}
 				}
 			}
 

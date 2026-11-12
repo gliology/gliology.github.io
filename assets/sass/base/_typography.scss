@@ -48,7 +48,7 @@
 
 		&:hover {
 			text-decoration: none;
-			border-bottom-color: transparent;
+			color: _palette(accent-border);
 		}
 	}
 
@@ -91,6 +91,10 @@
       footer {
 	        h1, h2, h3, h4, h5, h6, p, a {
 	            color: _palette(accent-fg) !important;
+          }
+
+	        a:hover {
+	            color: _palette(accent-border) !important;
           }
       }
   }
